@@ -30,8 +30,7 @@ class DictSolution:
                 return True
             s.add(p)
         return False
-class 
-            
+
             
 
 def stringToIntegerList(input):
