@@ -6,6 +6,10 @@
 
 # @lc code=start
 # Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
 from typing import Optional, Callable, Any, Tuple
 import json
 class ListNode:
@@ -22,6 +26,5 @@ class Solution:
             p.next,a.next,b.next =  b,b.next,a
             p = a
         return xh.next
-
 # @lc code=end
 

@@ -8,12 +8,10 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         st = "".join(filter(str.isalnum, s)).lower()
-        lh = int(len(st)/2)
-        if lh == 0:
-            return True
-        f, b = st[:lh], st[-lh:]
-        return f == ''.join(b[len(b)-i-1] for i in range(len(b)))
-
-
+        i, j = 0, len(st)-1
+        while i < j:
+            if st[i] != st[j]: return False
+            i += 1; j -= 1
+        return True
 # @lc code=end
 

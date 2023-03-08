@@ -28,3 +28,16 @@ s = 'Colour Temperature is 2700 Kelvin'
 re.sub(r'[^a-zA-Z]', "", s)
 ```
 
+### 1.2 字母ASCII码
+
+a-z: 97-122
+
+A-Z: 65-90
+
+## 2 列表
+
+### 2.1 字符串转为列表
+
+```python
+```
+
