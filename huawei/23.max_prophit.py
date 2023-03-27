@@ -4,6 +4,7 @@ it_ =[int(i) for i in input().strip().split()]
 itp_ = []
 for i in range(n_):
     itp_.append([int(j) for j in input().strip().split()])
+    
 rst = 0
 for i in range(n_):
     m_ = 0
