@@ -21,3 +21,16 @@
 输出:
 6
 '''
+from typing import Optional
+class LinkedListNode:
+    def __init__(self, val:int=0,next=None):
+        self.val = val
+        self.next = next
+
+head,n_ = input().strip().split()
+n_ = int(n_)
+
+n_map = {}
+for i in range(n_):
+    n_addr,n_val,n_next = input().strip().split()
+    
