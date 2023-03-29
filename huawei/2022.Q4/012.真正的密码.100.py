@@ -19,6 +19,8 @@ passwds = input().strip().split()
 
 rst = ''
 for p in passwds:
+  # 如果下标为0的所有子串都在字典中 all([p[:j] in passwds for j in range(1,len(p))])
+  # 且 长度大于当前所选真实密码, 或者长度相等,但是字典序大于当前真实密码
   if all([p[:j] in passwds for j in range(1,len(p))]) and (len(p)>len(rst) or (len(p)==len(rst) and p>rst)):
     rst = p
 print(rst)
