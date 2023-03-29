@@ -34,3 +34,13 @@
 区间 [10,20] 内，满足条件的数字有 [12,14,15,16,17,18,19] 因此答案为 7。
 
 '''
+def not_contains_101_1():
+    l,r = (int(i) for i in input().strip().split())
+    count = 0
+    for i in range(l,r+1):
+        str_ = str(bin(i)).replace('0b','')
+        if '101' not in str_:
+            count = count + 1
+    print(count)
+
+not_contains_101_1()
