@@ -115,8 +115,6 @@ random.choice([])  #从列表之间随机选取一个数
 
 ```python
 
-
-
 ```
 
 ## 字典
@@ -514,18 +512,14 @@ list(it.zip_longest(fruits, prices, fillvalue='Sold out'))
 
 `product(*iterables, repeat=1)`
 
-Cartesian product of input iterables. 生成输入各iterable（分别看作一个集合）的笛卡尔积.
+> Cartesian product of input iterables. Roughly equivalent to nested for-loops in a generator expression. For  example, product(A, B) returns the same as ((x,y) for x in A for y in B).
 
-Roughly equivalent to nested for-loops in a generator expression. For  example, product(A, B) returns the same as ((x,y) for x in A for y in B).
-大致等价于生成器表达式中的嵌套循环。最右侧的iterable处于最内层循环，最左侧的iterable处于最外层循环。打个比方说，如果输入有三个iterable，product(A,B,C)，则C可以看作是秒针，B可以看作是分针，A可以看作是时针。或者C是里程计的最右侧读数，而A是最左侧读数。
+生成输入各iterable（分别看作一个集合）的笛卡尔积.大致等价于生成器表达式中的嵌套循环。最右侧的iterable处于最内层循环，最左侧的iterable处于最外层循环。打个比方说，如果输入有三个iterable，product(A,B,C)，则C可以看作是秒针，B可以看作是分针，A可以看作是时针。或者C是里程计的最右侧读数，而A是最左侧读数。
 
 如果要计算一个iterable自身的笛卡尔积，可以通过repeat指定重复次数。比如说，product('ABC',repeat=4)等价于product('ABC','ABC','ABC','ABC').
 
+it.product('AB','CD'):
 
-
-print('\nproduct example 1 ...')
-for item in it.product('AB','CD'):
-    print(item)
 
 print('\nproduct example 2 ...')
 for item in it.product('AB', repeat=4):
