@@ -44,10 +44,11 @@ n2 = x-1
 
 xm = x//2 if x%2==0 else x//2+1
 xn = xm-1
-
+if xn ==0:
+    xm = 2
 while m>0:
     # 如果原岸羊的数量比狼多,或者狼羊能一次运送完,则送的羊数量比狼大一只，
-    if (m-xm>n-xn) or (m==xm and n==xn):
+    if (m-xm>n-xn) or (m-xm<=0 and n-xn<=0):
         m -= xm
         n -= xn
         m2 += xm
@@ -63,4 +64,5 @@ while m>0:
         n -= add_n
         n2 += add_n
         t += 1
+    print(m,n,m2,n2,t)
 print(t)
