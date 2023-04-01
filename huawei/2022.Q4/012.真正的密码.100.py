@@ -14,9 +14,8 @@ f
 说明: 按要求，abcdf都是潜在密码。检查长度，a b c d f是真正的密码。检查字典序，f 是唯一真正密码
 '''
 
-import sys
+# import sys
 passwds = input().strip().split()
-
 rst = ''
 for p in passwds:
   # 如果下标为0的所有子串都在字典中 all([p[:j] in passwds for j in range(1,len(p))])
